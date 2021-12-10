@@ -10,8 +10,8 @@
 <body>
 
     <div id="root">
-        <li v-for="email in listaMail">
-            <div>{{email.mail}}</div>
+        <li v-show= "listaMail.length == 10" v-for="email in listaMail">
+            <div>{{email}}</div>
         </li>
     </div>
     

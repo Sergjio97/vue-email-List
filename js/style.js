@@ -13,16 +13,12 @@ const app = new Vue({
     created() {
         for (let i = 0; i < 10; i++) {
 
-            let newMail = {
-                mail: null,
-            }
-
             axios.get("https://flynn.boolean.careers/exercises/api/random/mail")
             .then((response) => {
-                newMail.mail = response.data.response;
+                this.listaMail.push(response.data.response);
             });
 
-            this.listaMail.push(newMail);
+    
         }
     },
 
